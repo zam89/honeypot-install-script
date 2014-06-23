@@ -93,7 +93,7 @@ read ipaddress
 	make install
 
 	# Setting up dionaea config file
-	wget https://github.com/zam89/maduu/raw/master/conf/dionaea.conf.simple -O /opt/dionaea/etc/dionaea/dionaea.conf
+	wget https://github.com/zam89/maduu/raw/master/conf/dionaea.conf -O /opt/dionaea/etc/dionaea/dionaea.conf
 	wget https://github.com/zam89/maduu/raw/master/hpfeeds/dionaea/hpfeeds.py -O /opt/dionaea/lib/dionaea/python/dionaea/hpfeeds.py
 	wget https://github.com/zam89/maduu/raw/master/hpfeeds/dionaea/ihandlers.py -O /opt/dionaea/lib/dionaea/python/dionaea/ihandlers.py
 
