@@ -41,9 +41,10 @@ Directory Structure
 **Logging**
 * Dionaea: `/opt/dionaea/var/dionaea/`
 * Kippo: `/var/kippo/`
+* Glastopf: `/opt/glaspot/log/`
 * p0f: `/var/p0f/`
 
 **Configuration**
 * Dionaea: `/opt/dionaea/etc/dionaea/`
 * Kippo: `/opt/kippo/`
-
+* Glastopf: `/opt/glaspot/`
