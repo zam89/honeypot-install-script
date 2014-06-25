@@ -56,7 +56,7 @@ read mysql
 	wget https://github.com/zam89/maduu/raw/master/conf/glastopf.cfg
 	
 	# Create database named glaspot & set permission
-	mysql --user="root" --password="$mysql" --execute="create database glaspot; create user 'glaspot'@'localhost' identified by 'glaspot'; grant all privileges on glaspot.* to 'glaspot'@'localhost'; flush privileges;"
+	mysql --user="root" --password="$mysql" --execute="create database glaspot; create user 'glaspot'@'localhost' identified by 'gl@sp0t'; grant all privileges on glaspot.* to 'glaspot'@'localhost'; flush privileges;"
 	
 	wget https://github.com/zam89/maduu/raw/master/init/glastopf -O /etc/init.d/glastopf
 	chmod 755 /etc/init.d/glastopf
