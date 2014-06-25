@@ -66,8 +66,8 @@ read -s mysql
 
   # Start kippo
   wget https://github.com/zam89/maduu/raw/master/init/kippo -O /etc/init.d/kippo
-  chmod 755 kippo
-  chmod +x kippo
+  chmod 755 /etc/init.d/kippo
+  chmod +x /etc/init.d/kippo
 
   mkdir /var/run/kippo
   chown -R kippo:kippo /var/run/kippo
