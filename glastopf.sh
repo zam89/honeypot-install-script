@@ -10,7 +10,7 @@ read mysql
 {
 
 	apt-get update
-	apt-get install python2.7 python-openssl python-gevent libevent-dev python2.7-dev build-essential make liblapack-dev libmysqlclient-dev python-chardet python-requests python-sqlalchemy python-lxml python-beautifulsoup mongodb python-pip python-dev python-numpy python-setuptools python-numpy-dev python-scipy libatlas-dev g++ git php5 php5-dev gfortran mysql-server python-mysqldb libxml2 libxslt-dev
+	apt-get install python2.7 python-openssl python-gevent libevent-dev python2.7-dev build-essential make liblapack-dev libmysqlclient-dev python-chardet python-requests python-sqlalchemy python-lxml python-beautifulsoup mongodb python-pip python-dev python-numpy python-setuptools python-numpy-dev python-scipy libatlas-dev g++ git php5 php5-dev gfortran mysql-server python-mysqldb libxml2 libxslt-dev -y
 	pip install --upgrade distribute
 	pip install gevent webob pyopenssl chardet lxml sqlalchemy jinja2 beautifulsoup requests cssselect pymongo MySQL-python hpfeeds pylibinjection libtaxii greenlet --upgrade
 
@@ -50,8 +50,9 @@ read mysql
 	# Create database named glaspot & set permission
 	mysql --user="root" --password="$mysql" --execute="create database glaspot; create user 'glaspot'@'localhost' identified by 'glaspot'; grant all privileges on glaspot.* to 'glaspot'@'localhost'; flush privileges;"
 
-	cd /opt/glastopf/
-	python /usr/local/bin/glastopf-runner > /dev/null 2>&1 &
+	wget https://github.com/zam89/maduu/raw/master/init/glastopf -O /etc/init.d/glastopf
+	chmod 755 /etc/init.d/glastopf
+	chmod +x /etc/init.d/glastopf
 
 } 2>&1 | tee hornet.log
 
