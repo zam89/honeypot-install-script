@@ -18,7 +18,7 @@ read -s mysql
   service ssh reload
 
   # Install required packages from repo
-  apt-get install ssh subversion mysql-server python-dev openssl python-openssl python-pyasn1 python-twisted python-mysqldb python-pip python-software-properties iptables gcc
+  apt-get install ssh subversion mysql-server python-dev openssl python-openssl python-pyasn1 python-twisted python-mysqldb python-pip python-software-properties iptables gcc -y
 
   # Create /opt/kippo directory
   mkdir /opt/kippo/
@@ -34,7 +34,7 @@ read -s mysql
 
   # Import mysql structure to database
   cd /opt/kippo/doc/sql
-  mysql -u kippo -p'$mysql' kippo < mysql.sql
+  mysql -u kippouser -p'$mysql' kippo < mysql.sql
 
   # Copy kippo config file
   cd /opt/kippo/
