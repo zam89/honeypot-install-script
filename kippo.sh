@@ -25,6 +25,7 @@ read -s mysql
 
   # Download Kippo source code to your server
   svn checkout http://kippo.googlecode.com/svn/trunk/ /opt/kippo/
+  # git clone https://github.com/zam89/kippo.git
 
   # Add kippo user that can't login
   useradd -r -s /bin/false kippo
