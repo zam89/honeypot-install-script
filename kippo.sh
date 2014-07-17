@@ -74,14 +74,14 @@ read -s mysql
         /etc/init.d/kippo start
 
         # Set proper permission
-        chown kippo /opt/kippo/
-        chgrp kippo /opt/kippo/
-        chown kippo /opt/kippo/data/
-        chgrp kippo /opt/kippo/data/
-        chown kippo /var/kippo/log/
-        chgrp kippo /var/kippo/log/
-        chown kippo /var/kippo/log/tty/
-        chgrp kippo /var/kippo/log/tty/
+        chown -R kippo /opt/kippo/
+        chgrp -R kippo /opt/kippo/
+        chown -R kippo /opt/kippo/data/
+        chgrp -R kippo /opt/kippo/data/
+        chown -R kippo /var/kippo/log/
+        chgrp -R kippo /var/kippo/log/
+        chown -R kippo /var/kippo/log/tty/
+        chgrp -R kippo /var/kippo/log/tty/
 
 } 2>&1 | tee hornet.log
 
