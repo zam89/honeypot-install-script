@@ -12,7 +12,7 @@ read mysql
 	apt-get update
 	apt-get install python2.7 python-openssl python-gevent libevent-dev python2.7-dev build-essential make liblapack-dev libmysqlclient-dev python-chardet python-requests python-sqlalchemy python-lxml python-beautifulsoup mongodb python-pip python-dev python-numpy python-setuptools python-numpy-dev python-scipy libatlas-dev g++ git php5 php5-dev gfortran mysql-server python-mysqldb libxml2 libxslt-dev libffi-dev -y
 	pip install --upgrade distribute
-	pip install --upgrade gevent webob pyopenssl chardet lxml sqlalchemy jinja2 beautifulsoup requests cssselect pymongo MySQL-python hpfeeds pylibinjection libtaxii greenlet
+	pip install --upgrade gevent webob pyopenssl chardet lxml sqlalchemy jinja2 beautifulsoup requests cssselect pymongo MySQL-python pylibinjection libtaxii greenlet
 	
 	# Install hpfeeds
 	cd /opt
