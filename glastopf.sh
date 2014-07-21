@@ -53,6 +53,7 @@ read mysql
 	
 	cd /opt
 	sudo mkdir glaspot
+	cd /opt/glaspot
 	wget https://github.com/zam89/maduu/raw/master/conf/glastopf.cfg
 	
 	# Create database named glaspot & set permission
