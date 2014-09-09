@@ -31,6 +31,7 @@ read ipaddress
 	autoreconf -vi
 	./configure --prefix=/opt/dionaea
 	make install
+	ldconfig
 
 	# Libemu
 	cd ~/src
@@ -39,17 +40,19 @@ read ipaddress
 	autoreconf -vi
 	./configure --prefix=/opt/dionaea
 	make install
+	ldconfig
 
 	# Libnl
 	apt-get install libnl-3-dev libnl-genl-3-dev libnl-nf-3-dev libnl-route-3-dev -y
 
 	# Libev
 	cd ~/src
-	wget http://dist.schmorp.de/libev/libev-4.15.tar.gz
-	tar xfz libev-4.15.tar.gz
-	cd libev-4.15/
+	wget http://dist.schmorp.de/libev/libev-4.18.tar.gz
+	tar xfz libev-4.18.tar.gz
+	cd libev-4.18
 	./configure --prefix=/opt/dionaea
 	make install
+	ldconfig
 
 	# Python 
 	cd ~/src
@@ -59,22 +62,25 @@ read ipaddress
 	./configure --enable-shared --prefix=/opt/dionaea --with-computed-gotos --enable-ipv6 LDFLAGS="-Wl,-rpath=/opt/dionaea/lib/ -L/usr/lib/x86_64-linux-gnu/"
 	make
 	make install
+	ldconfig
 
 	# Cython
 	cd ~/src
-	wget http://cython.org/release/Cython-0.19.2.tar.gz
-	tar xfz Cython-0.19.2.tar.gz
-	cd Cython-0.19.2
+	wget http://cython.org/release/Cython-0.21rc1.tar.gz
+	tar xfz Cython-0.21rc1.tar.gz
+	cd Cython-0.21rc1
 	/opt/dionaea/bin/python3 setup.py install
+	ldconfig
 
 	# Libpcap
 	cd ~/src
-	wget http://www.tcpdump.org/release/libpcap-1.2.1.tar.gz
-	tar xfz libpcap-1.2.1.tar.gz
-	cd libpcap-1.2.1
+	wget http://www.tcpdump.org/release/libpcap-1.6.2.tar.gz
+	tar xfz libpcap-1.6.2.tar.gz
+	cd libpcap-1.6.2
 	./configure --prefix=/opt/dionaea
 	make
 	make install
+	ldconfig
 
 	# p0f
 	apt-get install p0f -y
@@ -91,6 +97,7 @@ read ipaddress
 	./configure --with-lcfg-include=/opt/dionaea/include/ --with-lcfg-lib=/opt/dionaea/lib/ --with-python=/opt/dionaea/bin/python3.2 --with-cython-dir=/opt/dionaea/bin --with-udns-include=/opt/dionaea/include/ --with-udns-lib=/opt/dionaea/lib/ --with-emu-include=/opt/dionaea/include/ --with-emu-lib=/opt/dionaea/lib/ --with-gc-include=/usr/include/gc --with-ev-include=/opt/dionaea/include --with-ev-lib=/opt/dionaea/lib --with-nl-include=/opt/dionaea/include --with-nl-lib=/opt/dionaea/lib/ --with-curl-config=/usr/bin/ --with-pcap-include=/opt/dionaea/include --with-pcap-lib=/opt/dionaea/lib/
 	make
 	make install
+	ldconfig
 
 	# Setting up dionaea config file
 	wget https://github.com/zam89/maduu/raw/master/conf/dionaea.conf -O /opt/dionaea/etc/dionaea/dionaea.conf
