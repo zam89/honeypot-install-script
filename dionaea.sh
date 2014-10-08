@@ -47,9 +47,9 @@ read ipaddress
 
 	# Libev
 	cd ~/src
-	wget http://dist.schmorp.de/libev/libev-4.18.tar.gz
-	tar xfz libev-4.18.tar.gz
-	cd libev-4.18
+	wget http://dist.schmorp.de/libev/libev-4.19.tar.gz
+	tar xfz libev-4.19.tar.gz
+	cd libev-4.19
 	./configure --prefix=/opt/dionaea
 	make install
 	ldconfig
@@ -58,7 +58,7 @@ read ipaddress
 	cd ~/src
 	wget http://www.python.org/ftp/python/3.2.2/Python-3.2.2.tgz
 	tar xfz Python-3.2.2.tgz
-	cd Python-3.2.2/
+	cd Python-3.2.2
 	./configure --enable-shared --prefix=/opt/dionaea --with-computed-gotos --enable-ipv6 LDFLAGS="-Wl,-rpath=/opt/dionaea/lib/ -L/usr/lib/x86_64-linux-gnu/"
 	make
 	make install
