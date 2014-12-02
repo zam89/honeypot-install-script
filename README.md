@@ -38,13 +38,19 @@ Effects
 
 Directory Structure
 ---------------------
-**Logging**
-* Dionaea: `/opt/dionaea/var/dionaea/`
-* Kippo: `/var/kippo/`
-* Glastopf: `/opt/glaspot/log/`
-* p0f: `/var/p0f/`
-
-**Configuration**
+**Start-up Script**
+* p0f: `/etc/init.d/p0f start|stop|status|restart`
+* Dionaea: `/etc/init.d/dionaea start|stop|status|restart`
+* Kippo: `/etc/init.d/kippo start|stop|status|restart`
+* Glastopf: `/etc/init.d/glastopf start|stop|status|restart`
+* 
+* **Configuration**
 * Dionaea: `/opt/dionaea/etc/dionaea/`
 * Kippo: `/opt/kippo/`
 * Glastopf: `/opt/glaspot/`
+
+**Logging**
+* Dionaea: `/opt/dionaea/var/dionaea/`
+* Kippo: `/var/kippo/`
+* Glastopf: `/opt/glaspot/`
+* p0f: `/var/p0f/`
